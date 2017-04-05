@@ -9,9 +9,10 @@ public class Funktionen {
 	public static long mosp;
 
 	public long motorspeed(int umdrehungen) {
-		// Wie lange braucht der LegoRoboter um die KeyBoard Taste zu drücken
+		// Wie lange braucht der LegoRoboter um die KeyBoard Taste zu drÃ¼cken
 		StopWatch s = new StopWatch();
 		long total = 0;
+		Motor.C.setSpeed(1000);
 		for (int i = 0; i < umdrehungen; i++) {
 			s.start();
 			Motor.C.rotate(45);
@@ -25,13 +26,16 @@ public class Funktionen {
 		return total;
 
 		// Ziemlich genau 700ms (mit fast leeren Batterien
-		// nochmals mit zu 1/2 gefüllte Batterien getestet immer 568ms
+		// nochmals mit zu 1/2 gefÃ¼llte Batterien getestet immer 568ms
 	
 	}
 
 	public void spielen(String n, int x) {
 		int drehen = 45;
 		int tempo = t;
+		Motor.A.setSpeed(1000);
+		Motor.B.setSpeed(1000);
+		Motor.C.setSpeed(1000);
 		int d = (int) ((x * 600 / tempo) - mosp);
 		if (n.equals("c")) {
 			Motor.A.rotate(drehen);
