@@ -7,6 +7,21 @@ import motorschnelligkeit.StopWatch;
 public class Funktionen {
 	static int t = 0;
 	public static long mosp;
+	
+	
+	public void connect() {
+		
+		NXTCommConnector connector = Bluetooth.getConnector();
+		try {
+			RemoteNXT nxt = new RemoteNXT("NXT", connector);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+		
+	}
 
 	public long motorspeed(int umdrehungen) {
 		// Wie lange braucht der LegoRoboter um die KeyBoard Taste zu drücken
