@@ -9,19 +9,19 @@ public class Funktionen {
 	public static long mosp;
 	
 	
-	public void connect() {
-		
-		NXTCommConnector connector = Bluetooth.getConnector();
+	public static void connecting(){
 		try {
-			RemoteNXT nxt = new RemoteNXT("NXT", connector);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LCD.drawString("Connecting...", 0, 0);
+			NXTCommConnector connector = Bluetooth.getConnector();
+			nxt = new RemoteNXT("NXT", connector);
+			
+		} catch (IOException ioe) {
+			LCD.clear();
+			LCD.drawString("Conn Failed", 0, 0);
+			Button.waitForAnyPress();
+			System.exit(1);
 		}
-
-		
-		
-	}
+}
 
 	public long motorspeed(int umdrehungen) {
 		// Wie lange braucht der LegoRoboter um die KeyBoard Taste zu drücken
