@@ -6,7 +6,7 @@ import motorschnelligkeit.StopWatch;
 
 
 public class Lieder {
-	
+	static int t = 0;
 	public static long mosp;
 	
 	public static long motorspeed(int umdrehungen){
@@ -28,7 +28,7 @@ public class Lieder {
 		// Ziemlich genau 700ms (mit fast leeren Batterien
 		// nochmals mit zu 1/2 gefüllte Batterien getestet immer 568ms
 	}
-	public static void Allmyducks(){
+	public static void Allmyducks(int t){
 		mosp = motorspeed(5);
 		spielen("c", 50);
 		spielen("d", 50);
@@ -60,7 +60,7 @@ public class Lieder {
 	}
 	public static void spielen(String n, int x ){
 		int drehen = 45;
-		int tempo = 100;
+		int tempo = t;
 		int d = (int) ((x*600/tempo)- mosp);
 		if(n.equals("c")){
 			Motor.A.rotate(drehen);
