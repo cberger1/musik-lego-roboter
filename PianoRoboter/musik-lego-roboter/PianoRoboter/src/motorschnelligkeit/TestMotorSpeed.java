@@ -14,12 +14,13 @@ public class TestMotorSpeed {
 		int mosp =  (int) motorspeed(2);
 		System.out.println(mosp);
 		Delay.msDelay(2000);
+		System.out.println(motorspeed(2));
+		Delay.msDelay(2000);
 	}
 	public static long  motorspeed(int umdrehungen){
 		// Wie lange braucht der LegoRoboter um die KeyBoard Taste zu drücken
 		StopWatch s = new StopWatch();
 		long total = 0;
-		Motor.C.setSpeed(1000);
 		for (int i = 0; i<umdrehungen ; i++){
 		s.start();
 		Motor.C.rotate(45);
