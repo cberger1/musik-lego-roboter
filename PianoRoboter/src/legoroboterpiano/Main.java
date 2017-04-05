@@ -1,8 +1,9 @@
 package legoroboterpiano;
 
 
-
 public class Main {
+
+	
 
 	/**
 	 * @param args
@@ -11,7 +12,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Lieder.Allmyducks(100);
 	}
-	
+
 }
 
 
