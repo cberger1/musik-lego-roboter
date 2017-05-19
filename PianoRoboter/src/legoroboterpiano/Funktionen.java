@@ -52,7 +52,7 @@ public class Funktionen {
 	
 	
 
-	public void spielen(String n, int x) {
+	public void pl(String n, int x) {
 		int drehen = 45;
 		int tempo = t;
 		Motor.A.setSpeed(1000);
@@ -94,6 +94,31 @@ public class Funktionen {
 			nxt.A.rotate(-drehen);
 			Delay.msDelay(d);
 			nxt.A.rotate(drehen);
+		}
+		if (n.equals("C")) {
+			Motor.A.rotate(-drehen);
+			Delay.msDelay(d);
+			Motor.A.rotate(drehen);
+		}
+		if (n.equals("D")) {
+			Motor.B.rotate(drehen);
+			Delay.msDelay(d);
+			Motor.B.rotate(-drehen);
+		}
+		if (n.equals("E")) {
+			Motor.B.rotate(-drehen);
+			Delay.msDelay(d);
+			Motor.B.rotate(drehen);
+		}
+		if (n.equals("F")) {
+			Motor.C.rotate(drehen);
+			Delay.msDelay(d);
+			Motor.C.rotate(-drehen);
+		}
+		if (n.equals("G")) {
+			Motor.C.rotate(-drehen);
+			Delay.msDelay(d);
+			Motor.C.rotate(drehen);
 		}
 	}
 
