@@ -10,7 +10,7 @@ public class Lieder {
 	public static void Allmyducks(int t) {
 		Funktionen.connecting();
 		Funktionen.mosp = f.motorspeed(5);
-		f.pl("h", 50);
+		f.pl("c", 50);
 		f.pl("d", 50);
 		f.pl("e", 50);
 		f.pl("f", 50);
