@@ -56,8 +56,8 @@ public class Lieder {
 		f.pl("f", 50);
 		f.pl("f", 50);
 		f.pl("f", 50);
-		f.pl("e", 100);
-		f.pl("e", 100);
+		f.pl("e", 150);
+		f.pl("e", 150);
 		f.pl("d", 50);
 		f.pl("d", 50);
 		f.pl("d", 50);
